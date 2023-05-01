@@ -4,13 +4,8 @@ import pickle
 import sqlite3
 import os
 import numpy as np
-
-# import HashingVectorizer from local dir
 from vectorizer import vect
-
 app = Flask(__name__)
-
-# Preparing the Classifier
 cur_dir = os.path.dirname(__file__)
 clf = pickle.load(open(os.path.join(cur_dir,
                                     'pkl_objects',
